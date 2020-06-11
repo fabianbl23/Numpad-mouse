@@ -1,6 +1,5 @@
 import pyautogui
 import keyboard
-import time
 
 def move_up():
 	pyautogui.moveRel(0,-20)
@@ -33,7 +32,7 @@ def scroll_down():
 	pyautogui.scroll(100)
 
 # Key block preventing writing while pressing keys
-keyboard.block_key(104) # block numpad 8
+keyboard.block_key(72) # block numpad 8
 keyboard.block_key(82) # block numpad 0
 keyboard.block_key(83) # block numpad .
 keyboard.block_key(79) # block numpad 1
@@ -51,7 +50,7 @@ on = True
 while(True):
 	while(on == True):				
 		###################################		
-		if(keyboard.is_pressed(104)):
+		if(keyboard.is_pressed(72)):
 			move_up()		
 		if(keyboard.is_pressed(80)):
 			move_down()			
